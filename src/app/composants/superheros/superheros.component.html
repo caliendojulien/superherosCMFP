@@ -1,0 +1,19 @@
+<div>
+  <p *ngIf=" banner != '' ">
+    {{ banner }}
+  </p>
+  <button (click)="retireUnSuperHero()">Retirer un super héros</button>
+  <ul>
+    <li *ngFor="let chaque_super_hero of superheros">
+      <app-un-seul-super-heros [leNomDeMonSuperHeroes]="chaque_super_hero.nom">
+      </app-un-seul-super-heros>
+    </li>
+  </ul>
+  <div>
+    <input type="text" [(ngModel)]="monInput">
+    <button (click)="ajouter(monInput)">Ajouter</button>
+  </div>
+  <div>
+    <p>{{ monInput }}</p>
+  </div>
+</div>
